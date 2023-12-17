@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Bebas Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  width: 90vw;
+}
+.panel {
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  flex-grow: 0.5;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  -webkit-transition: flex 0.7s ease-in;
+  -moz-transition: flex 0.7s ease-in;
+  -ms-transition: flex 0.7s ease-in;
+  -o-transition: flex 0.7s ease-in;
+  margin: 10px;
+}
+.panel h3 {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  opacity: 0;
+  transition: 0.3s ease-in 0.4s;
+  margin: 0;
+  -webkit-transition: 0.3s ease-in 0.4s;
+  -moz-transition: 0.3s ease-in 0.4s;
+  -ms-transition: 0.3s ease-in 0.4s;
+  -o-transition: 0.3s ease-in 0.4s;
+}
+.active {
+  background-size: auto;
+  flex-grow: 5;
+  overflow: hidden;
+}
+.active h3 {
+  opacity: 1;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
